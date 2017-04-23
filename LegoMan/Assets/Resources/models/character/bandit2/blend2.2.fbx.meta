@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: fcd31f7463f8afa43af9eed9ff255bc9
-timeCreated: 1492637829
+guid: 76330ffe80bd10f49aae35cf3fdc49d9
+timeCreated: 1492868998
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -91,11 +91,10 @@ ModelImporter:
     400082: Spine_2
     4300000: CH_MNPCbot01
     7400000: Armature|ArmatureAction
-    7400002: run
-    7400004: Armature|run
-    7400006: idle
-    7400008: battle
-    7400010: attack
+    7400002: idle
+    7400004: run
+    7400006: attack
+    7400008: walk
     9500000: //RootNode
     13700000: CH_MNPCbot01
   materials:
@@ -120,9 +119,121 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
+      name: attack
+      takeName: Armature|idle
+      firstFrame: 89
+      lastFrame: 113
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Pelvis
+        weight: 1
+      - path: Armature/Pelvis/L_Thigh
+        weight: 1
+      - path: Armature/Pelvis/L_Thigh/L_Leg
+        weight: 1
+      - path: Armature/Pelvis/L_Thigh/L_Leg/L_Foot
+        weight: 1
+      - path: Armature/Pelvis/L_Thigh/L_Leg/L_Foot/L_Toe
+        weight: 1
+      - path: Armature/Pelvis/L_Thigh/L_Leg/L_Foot/L_Toe/L_Toe_end
+        weight: 1
+      - path: Armature/Pelvis/R_Thigh
+        weight: 1
+      - path: Armature/Pelvis/R_Thigh/R_Leg
+        weight: 1
+      - path: Armature/Pelvis/R_Thigh/R_Leg/R_Foot
+        weight: 1
+      - path: Armature/Pelvis/R_Thigh/R_Leg/R_Foot/R_Toe
+        weight: 1
+      - path: Armature/Pelvis/R_Thigh/R_Leg/R_Foot/R_Toe/R_Toe_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_0
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Index_A
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Index_A/L_Index_A_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Middle_A
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Middle_A/L_Middle_A_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Thumb_B
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Thumb_B/L_Thumb_B_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/Neck_1
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/Neck_1/Head
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/Neck_1/Head/Head_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Index_A
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Index_A/R_Index_A_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Middle_A
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Middle_A/R_Middle_A_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Thumb_B
+        weight: 1
+      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Thumb_B/R_Thumb_B_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: CH_MNPCbot01
+        weight: 1
+      - path: Lamp
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: idle
       takeName: Armature|idle
-      firstFrame: 194
+      firstFrame: 182
       lastFrame: 210
       wrapMode: 0
       orientationOffsetY: 0
@@ -233,121 +344,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: run
-      takeName: Armature|idle
-      firstFrame: 133
-      lastFrame: 164
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Pelvis
-        weight: 1
-      - path: Armature/Pelvis/L_Thigh
-        weight: 1
-      - path: Armature/Pelvis/L_Thigh/L_Leg
-        weight: 1
-      - path: Armature/Pelvis/L_Thigh/L_Leg/L_Foot
-        weight: 1
-      - path: Armature/Pelvis/L_Thigh/L_Leg/L_Foot/L_Toe
-        weight: 1
-      - path: Armature/Pelvis/L_Thigh/L_Leg/L_Foot/L_Toe/L_Toe_end
-        weight: 1
-      - path: Armature/Pelvis/R_Thigh
-        weight: 1
-      - path: Armature/Pelvis/R_Thigh/R_Leg
-        weight: 1
-      - path: Armature/Pelvis/R_Thigh/R_Leg/R_Foot
-        weight: 1
-      - path: Armature/Pelvis/R_Thigh/R_Leg/R_Foot/R_Toe
-        weight: 1
-      - path: Armature/Pelvis/R_Thigh/R_Leg/R_Foot/R_Toe/R_Toe_end
-        weight: 1
-      - path: Armature/Pelvis/Spine_0
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Index_A
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Index_A/L_Index_A_end
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Middle_A
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Middle_A/L_Middle_A_end
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Thumb_B
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/L_Clavicle/L_Shoulder/L_Forearm/L_Hand/L_Thumb_B/L_Thumb_B_end
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/Neck_1
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/Neck_1/Head
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/Neck_1/Head/Head_end
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Index_A
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Index_A/R_Index_A_end
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Middle_A
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Middle_A/R_Middle_A_end
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Thumb_B
-        weight: 1
-      - path: Armature/Pelvis/Spine_0/Spine_1/Spine_2/R_Clavicle/R_Shoulder/R_Forearm/R_Hand/R_Thumb_B/R_Thumb_B_end
-        weight: 1
-      - path: Camera
-        weight: 1
-      - path: CH_MNPCbot01
-        weight: 1
-      - path: Lamp
-        weight: 1
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: battle
-      takeName: Armature|idle
-      firstFrame: 214
-      lastFrame: 268
+      takeName: Armature|run
+      firstFrame: 0
+      lastFrame: 22
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -456,10 +455,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attack
+      name: walk
       takeName: Armature|idle
-      firstFrame: 276
-      lastFrame: 326
+      firstFrame: 241
+      lastFrame: 279
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -467,7 +466,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

@@ -8,9 +8,10 @@ public class Player : MonoBehaviour {
     public Slider healthBar;
     public float currentHealth { get; set; }
     public float maxHealth { get; set; }
+    public int hitCounter;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         maxHealth = 1.0f;
         currentHealth = maxHealth;
         healthBar.value = calculateHealth();
@@ -35,7 +36,10 @@ public class Player : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            currentHealth -= 0.1f;
+            float damage = collision.gameObject.GetComponent<BasicEnemy>().DanoDoInimigo;
+            hitCounter++;
+            Debug.Log("Hit:"+ hitCounter);
+            currentHealth -= damage;
         }
     }
 }

@@ -5,14 +5,20 @@ using UnityEngine;
 public class Walker : MonoBehaviour {
 
     public Animator animation;
-    public bool IsWalking;
     public float speedFwd = 8;
     public float speedRot;
+    public GameObject weaponPosition;
+    public GameObject baseballBat;
 
     public float speed;
 	// Use this for initialization
 	void Start () {
-        animation = this.gameObject.GetComponent<Animator>();        
+        animation = this.gameObject.GetComponent<Animator>();
+        //weaponPosition = (GameObject)Instantiate(weaponPosition);
+        //baseballBat = (GameObject)Instantiate(baseballBat);
+        baseballBat = Instantiate(baseballBat, weaponPosition.transform.localPosition, weaponPosition.transform.localRotation);
+        baseballBat.transform.parent = weaponPosition.transform;
+        baseballBat.transform.localPosition = weaponPosition.transform.localPosition;
     }
 	
 	// Update is called once per frame
@@ -26,52 +32,39 @@ public class Walker : MonoBehaviour {
         speedRot = 45 * Time.deltaTime;
         //healthTxt.text = 'HP:' + health;
         //scoreTxt.text = 'Score:' + score;
-        if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D))
+
+        if (Input.GetButton("Horizontal"))
         {
-            IsWalking = true;
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                transform.Rotate(0, speedRot, 0);
+            } else
+            {
+                transform.Rotate(0, -speedRot, 0);
+            }
+        }
+
+        if (Input.GetButton("Vertical"))
+        {
+            if (Input.GetAxis("Vertical") > 0)
             {
                 transform.Translate(0, 0, speedWalk);
-            } else if (Input.GetKey(KeyCode.S))
+            } else
             {
                 transform.Translate(0, 0, -speedWalk);
             }
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.Rotate(0, -speedRot, 0);
-            } else if (Input.GetKey(KeyCode.D))
-            {
-                transform.Rotate(0, speedRot, 0);
-            }
-            animation.SetInteger("CurrentAction", 1);            
-        } if (Input.GetKeyUp(KeyCode.W)||Input.GetKeyUp(KeyCode.S)|| Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+            animation.SetInteger("CurrentAction", 1);
+        }
+        if (Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical"))
         {
-            IsWalking = false;
             animation.SetInteger("CurrentAction", 0);
         }
-
-
-        // punch
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetButton("Fire1"))
         {
-            transform.Translate(0, 0, speedWalk);
-            animation.SetInteger("CurrentAction", 2);
-        } else if (Input.GetKeyUp(KeyCode.T))
-        {
-            animation.SetInteger("CurrentAction", 4);
+            transform.Translate(0, 0, 0.01f);
+            animation.SetTrigger("attacking");
         }
-        // kick
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            transform.Translate(0, 0, speedWalk);
-            animation.SetInteger("CurrentAction", 3);
-        }
-        else if (Input.GetKeyUp(KeyCode.Y))
-        {
-            animation.SetInteger("CurrentAction", 4);
-        }
-                
+                              
     }
 
    
