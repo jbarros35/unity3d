@@ -20,7 +20,7 @@ public class ClickObject : MonoBehaviour {
         }
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse is down");
+            //Debug.Log("Mouse is down");
 
             RaycastHit hitInfo = new RaycastHit();
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
@@ -38,9 +38,9 @@ public class ClickObject : MonoBehaviour {
             }
             else
             {
-                Debug.Log("No hit");
+                //Debug.Log("No hit");
             }
-            Debug.Log("Mouse is down");
+            //Debug.Log("Mouse is down");
         }
     }
 

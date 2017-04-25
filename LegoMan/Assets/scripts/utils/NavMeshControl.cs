@@ -55,22 +55,44 @@ public class NavMeshControl : MonoBehaviour {
         //Vector3 paraOnde = attackPosition;
         Vector3 direction = paraOnde - deOnde;
               
-        //if (Physics.Raycast(LineOfSight.transform.position, direction, out hit, 1000, ignoreMask))
-        Ray ray = new Ray(LineOfSight.transform.position, transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.blue);
-        if (Physics.Raycast(ray.origin, ray.direction, out hit))
+        // If see player for the first time we start calculating only distance.   
+        if (VendoOPlayer)
         {
-            debug("HIT:" + hit.collider.gameObject.name + hit.collider.gameObject.CompareTag("Player"));
-            if (hit.collider.gameObject.CompareTag("Player"))
+            Debug.DrawRay(deOnde, paraOnde, Color.red);
+            if (Physics.Raycast(LineOfSight.transform.position, paraOnde, out hit, 1000, ignoreMask))
             {
-                Player = hit.transform;
-                VendoOPlayer = true;
+                debug("HIT:" + hit.collider.gameObject.name + hit.collider.gameObject.CompareTag("Player"));
+                if (hit.collider.gameObject.CompareTag("Player"))
+                {
+                    Player = hit.transform;
+                    VendoOPlayer = true;
+                }
+                else
+                {
+                   // VendoOPlayer = false;
+                }
             }
-            else
+        } else
+        {
+            // if we dont see player yet just look forward
+            Ray ray = new Ray(LineOfSight.transform.position, transform.forward);
+            Debug.DrawRay(ray.origin, ray.direction * 100, Color.blue);
+            if (Physics.Raycast(ray.origin, ray.direction, out hit))
             {
-                VendoOPlayer = false;
+                debug("HIT:" + hit.collider.gameObject.name + hit.collider.gameObject.CompareTag("Player"));
+                if (hit.collider.gameObject.CompareTag("Player"))
+                {
+                    Player = hit.transform;
+                    VendoOPlayer = true;
+                }               
             }
         }
+        checkPlayer();
+    }
+
+    void checkPlayer()
+    {
+
         //================ CHECHAGENS E DECISOES DO INIMIGO ================//
         if (playerDistance > perceptionDistance)
         {
@@ -140,7 +162,6 @@ public class NavMeshControl : MonoBehaviour {
             cronometroAtaque = 0;
             //Debug.Log("errou");
         }
-
     }
 
     void Walk()

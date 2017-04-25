@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ab948abd11a405542be2b578bcfa1fab
-timeCreated: 1492935638
+guid: 839e4de8855405a469de8273a3a7943a
+timeCreated: 1493117915
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -64,7 +64,8 @@ ModelImporter:
     4300000: Mesh_Default
     7400000: idle
     7400002: walk
-    7400004: attack
+    7400004: attack1
+    7400006: attack2
     9500000: //RootNode
     13700000: Mesh_Default
   materials:
@@ -92,7 +93,7 @@ ModelImporter:
       name: idle
       takeName: Armature|ArmatureAction
       firstFrame: 0
-      lastFrame: 21
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -257,7 +258,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attack
+      name: attack1
       takeName: Armature|ArmatureAction
       firstFrame: 98
       lastFrame: 118
@@ -267,7 +268,91 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone.001
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_L
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_L/Bone.001_L.001
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_L/Bone.001_L.001/Bone.001_L.002
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_L/Bone.001_L.001/Bone.001_L.002/Bone.001_L.003
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_L/Bone.001_L.001/Bone.001_L.002/Bone.001_L.003/Bone.001_L.003_end
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_R
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_R/Bone.001_R.001
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_R/Bone.001_R.001/Bone.001_R.002
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_R/Bone.001_R.001/Bone.001_R.002/Bone.001_R.003
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.001_R/Bone.001_R.001/Bone.001_R.002/Bone.001_R.003/Bone.001_R.003_end
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003
+        weight: 1
+      - path: Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.003_end
+        weight: 1
+      - path: Armature/Bone/Bone_L
+        weight: 1
+      - path: Armature/Bone/Bone_L/Bone_L.001
+        weight: 1
+      - path: Armature/Bone/Bone_L/Bone_L.001/Bone_L.002
+        weight: 1
+      - path: Armature/Bone/Bone_L/Bone_L.001/Bone_L.002/Bone_L.002_end
+        weight: 1
+      - path: Armature/Bone/Bone_R
+        weight: 1
+      - path: Armature/Bone/Bone_R/Bone_R.001
+        weight: 1
+      - path: Armature/Bone/Bone_R/Bone_R.001/Bone_R.002
+        weight: 1
+      - path: Armature/Bone/Bone_R/Bone_R.001/Bone_R.002/Bone_R.002_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Mesh_Default
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack2
+      takeName: Armature|ArmatureAction
+      firstFrame: 116
+      lastFrame: 153
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

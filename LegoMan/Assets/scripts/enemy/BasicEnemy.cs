@@ -10,9 +10,16 @@ public class BasicEnemy : MonoBehaviour
     public float HP = 1.0f;
     public float maxHP = 1.0f;
     public float DanoDoInimigo = 0.1f;
+    public float force = 1;
+    Renderer mainRenderer;
+    Material m;
+    Color32 c;
 
     void Start()  {
-      
+        debugActive = true;
+        mainRenderer = gameObject.GetComponentInChildren<Renderer>();
+        m = mainRenderer.material;
+        c = mainRenderer.material.color;
     }
 
 
@@ -23,13 +30,13 @@ public class BasicEnemy : MonoBehaviour
   
     private void OnCollisionEnter(Collision collision)
     {
-        debug("Collision enter:"+collision.gameObject.name);
+        //debug("Collision enter:"+collision.gameObject.name);
         // force is how forcefully we will push the player away from the enemy.
-        float force = 3;
-
+        
         // If the object we hit is the enemy
         if (collision.gameObject.tag == "Player")
         {
+            //debug("Collision on player");
             // Calculate Angle Between the collision point and the player
             Vector3 dir = collision.contacts[0].point - transform.position;
             // We then get the opposite (-Vector3) and normalize it
@@ -41,22 +48,19 @@ public class BasicEnemy : MonoBehaviour
 
         if (collision.gameObject.tag == "Weapon")
         {
-            debug("Have been hit");
+           // debug("Have been hit HP:"+HP);
+            StartCoroutine("Glow");
             if (HP>0)
             {
-                HP -= 0.1f;
+                HP -= 0.01f;
             } else
             {
-                Destroy(gameObject);
+                // This is model inside a navmesh agent we destroy the parent of object
+                Destroy(transform.parent.gameObject);               
             }
         }
     }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        debug("Collision exit:"+ collision.gameObject.name);
-    }
-
+    
     private void debug(string msg)
     {
         if (debugActive)
@@ -64,4 +68,16 @@ public class BasicEnemy : MonoBehaviour
             Debug.Log(msg);
         }        
     }
+
+    IEnumerator Glow()
+    {  
+        
+         mainRenderer.material = null;
+         mainRenderer.material.color = Color.red;
+         yield return new WaitForSeconds(0.5f);
+        Debug.Log("change back color " + c);
+         mainRenderer.material = m;
+         mainRenderer.material.color = c;            
+    }
+
 }
